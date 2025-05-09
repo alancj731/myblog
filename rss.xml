@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 09 May 2025 19:09:07 GMT</lastBuildDate><item><title><![CDATA[Concurrent tasks]]></title><description><![CDATA[💡 Tip for Working with Concurrent Tasks When managing concurrent tasks—especially when grouping data by a key —be careful to use Array or…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/concurrent/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/concurrent/</guid><pubDate>Fri, 09 May 2025 15:45:12 GMT</pubDate><content:encoded>&lt;h3&gt;💡 Tip for Working with Concurrent Tasks&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 09 May 2025 19:15:37 GMT</lastBuildDate><item><title><![CDATA[Concurrent tasks]]></title><description><![CDATA[💡 Tip for Working with Concurrent Tasks When managing concurrent tasks—especially when grouping data by a key —be careful to use Array or…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/concurrent/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/concurrent/</guid><pubDate>Fri, 09 May 2025 15:45:12 GMT</pubDate><content:encoded>&lt;h3&gt;💡 Tip for Working with Concurrent Tasks&lt;/h3&gt;
 &lt;p&gt;When managing concurrent tasks—especially when grouping data by a key —be careful to use Array or Map to store the intermediate or final results.&lt;/p&gt;
 &lt;h3&gt;🔍 Why?&lt;/h3&gt;
 &lt;p&gt;Check the first code snippet, where multiple tasks fetch project data and try to group projects by userId. When using an array to check for existing user records—as shown in the first code snippet—this approach can fail in a concurrent environment. Since each task may not be aware of changes made by others, it can result in duplicate entries for the same userId. Replacing the array with a Map doesn&apos;t fix the problem either.&lt;/p&gt;
@@ -8,7 +8,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/53e93dbb0a34bde0dc0301d19c870eea/acb04/one.jpg&quot;
+    href=&quot;/myblog/static/53e93dbb0a34bde0dc0301d19c870eea/acb04/one.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -21,11 +21,11 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;code snippet&quot;
         title=&quot;&quot;
-        src=&quot;/static/53e93dbb0a34bde0dc0301d19c870eea/828fb/one.jpg&quot;
-        srcset=&quot;/static/53e93dbb0a34bde0dc0301d19c870eea/ff44c/one.jpg 158w,
-/static/53e93dbb0a34bde0dc0301d19c870eea/a6688/one.jpg 315w,
-/static/53e93dbb0a34bde0dc0301d19c870eea/828fb/one.jpg 630w,
-/static/53e93dbb0a34bde0dc0301d19c870eea/acb04/one.jpg 750w&quot;
+        src=&quot;/myblog/static/53e93dbb0a34bde0dc0301d19c870eea/828fb/one.jpg&quot;
+        srcset=&quot;/myblog/static/53e93dbb0a34bde0dc0301d19c870eea/ff44c/one.jpg 158w,
+/myblog/static/53e93dbb0a34bde0dc0301d19c870eea/a6688/one.jpg 315w,
+/myblog/static/53e93dbb0a34bde0dc0301d19c870eea/828fb/one.jpg 630w,
+/myblog/static/53e93dbb0a34bde0dc0301d19c870eea/acb04/one.jpg 750w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
@@ -41,7 +41,7 @@
     &gt;
       &lt;a
     class=&quot;gatsby-resp-image-link&quot;
-    href=&quot;/static/274ac0ff7dbe981dde573f92b7ad9bd1/51aac/two.jpg&quot;
+    href=&quot;/myblog/static/274ac0ff7dbe981dde573f92b7ad9bd1/51aac/two.jpg&quot;
     style=&quot;display: block&quot;
     target=&quot;_blank&quot;
     rel=&quot;noopener&quot;
@@ -54,11 +54,11 @@
         class=&quot;gatsby-resp-image-image&quot;
         alt=&quot;code snippet&quot;
         title=&quot;&quot;
-        src=&quot;/static/274ac0ff7dbe981dde573f92b7ad9bd1/828fb/two.jpg&quot;
-        srcset=&quot;/static/274ac0ff7dbe981dde573f92b7ad9bd1/ff44c/two.jpg 158w,
-/static/274ac0ff7dbe981dde573f92b7ad9bd1/a6688/two.jpg 315w,
-/static/274ac0ff7dbe981dde573f92b7ad9bd1/828fb/two.jpg 630w,
-/static/274ac0ff7dbe981dde573f92b7ad9bd1/51aac/two.jpg 757w&quot;
+        src=&quot;/myblog/static/274ac0ff7dbe981dde573f92b7ad9bd1/828fb/two.jpg&quot;
+        srcset=&quot;/myblog/static/274ac0ff7dbe981dde573f92b7ad9bd1/ff44c/two.jpg 158w,
+/myblog/static/274ac0ff7dbe981dde573f92b7ad9bd1/a6688/two.jpg 315w,
+/myblog/static/274ac0ff7dbe981dde573f92b7ad9bd1/828fb/two.jpg 630w,
+/myblog/static/274ac0ff7dbe981dde573f92b7ad9bd1/51aac/two.jpg 757w&quot;
         sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
         style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
         loading=&quot;lazy&quot;
