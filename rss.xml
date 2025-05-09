@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 09 May 2025 19:03:39 GMT</lastBuildDate><item><title><![CDATA[Concurrent tasks]]></title><description><![CDATA[💡 Tip for Working with Concurrent Tasks When managing concurrent tasks—especially when grouping data by a key —be careful to use Array or…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/concurrent/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/concurrent/</guid><pubDate>Fri, 09 May 2025 15:45:12 GMT</pubDate><content:encoded>&lt;h3&gt;💡 Tip for Working with Concurrent Tasks&lt;/h3&gt;
+&lt;p&gt;When managing concurrent tasks—especially when grouping data by a key —be careful to use Array or Map to store the intermediate or final results.&lt;/p&gt;
+&lt;h3&gt;🔍 Why?&lt;/h3&gt;
+&lt;p&gt;Check the first code snippet, where multiple tasks fetch project data and try to group projects by userId. When using an array to check for existing user records—as shown in the first code snippet—this approach can fail in a concurrent environment. Since each task may not be aware of changes made by others, it can result in duplicate entries for the same userId. Replacing the array with a Map doesn&apos;t fix the problem either.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/53e93dbb0a34bde0dc0301d19c870eea/acb04/one.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 75.31645569620254%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAAPABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAcmIhC//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAEFAl//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/AT//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/AT//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAY/Al//xAAaEAACAgMAAAAAAAAAAAAAAAABEAARITFB/9oACAEBAAE/IRrsKvD/AP/aAAwDAQACAAMAAAAQ5M//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAQ/9oACAECAQE/ED//xAAcEAADAAEFAAAAAAAAAAAAAAAAAREQITFBcYH/2gAIAQEAAT8QRtHPCNPE7KUt0G68f//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;code snippet&quot;
+        title=&quot;&quot;
+        src=&quot;/static/53e93dbb0a34bde0dc0301d19c870eea/828fb/one.jpg&quot;
+        srcset=&quot;/static/53e93dbb0a34bde0dc0301d19c870eea/ff44c/one.jpg 158w,
+/static/53e93dbb0a34bde0dc0301d19c870eea/a6688/one.jpg 315w,
+/static/53e93dbb0a34bde0dc0301d19c870eea/828fb/one.jpg 630w,
+/static/53e93dbb0a34bde0dc0301d19c870eea/acb04/one.jpg 750w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;✅ The Fix:&lt;/h3&gt;
+&lt;p&gt;Let all concurrent tasks complete first, then group the data afterward. This approach avoids race conditions and ensures that all projects for a given user are accurately grouped.&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/static/274ac0ff7dbe981dde573f92b7ad9bd1/51aac/two.jpg&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 85.44303797468356%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/jpeg;base64,/9j/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wgARCAARABQDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAEF/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAH/2gAMAwEAAhADEAAAAcgJAtgQH//EABQQAQAAAAAAAAAAAAAAAAAAADD/2gAIAQEAAQUCH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BH//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BH//EABQQAQAAAAAAAAAAAAAAAAAAADD/2gAIAQEABj8CH//EABkQAAIDAQAAAAAAAAAAAAAAAAEQABExQf/aAAgBAQABPyEZDXEMhpcf/9oADAMBAAIAAwAAABCkADz/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/EB//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/EB//xAAcEAEAAQQDAAAAAAAAAAAAAAABABARIXGBkeH/2gAIAQEAAT8QQZPUfoS8Rg2i25o1f//Z&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;code snippet&quot;
+        title=&quot;&quot;
+        src=&quot;/static/274ac0ff7dbe981dde573f92b7ad9bd1/828fb/two.jpg&quot;
+        srcset=&quot;/static/274ac0ff7dbe981dde573f92b7ad9bd1/ff44c/two.jpg 158w,
+/static/274ac0ff7dbe981dde573f92b7ad9bd1/a6688/two.jpg 315w,
+/static/274ac0ff7dbe981dde573f92b7ad9bd1/828fb/two.jpg 630w,
+/static/274ac0ff7dbe981dde573f92b7ad9bd1/51aac/two.jpg 757w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item></channel></rss>
