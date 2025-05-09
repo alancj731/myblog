@@ -245,11 +245,11 @@ a:focus {
 }
 
 .global-wrapper[data-is-root-path="true"] .bio {
-  margin-bottom: var(--spacing-20);
+  margin-bottom: var(--spacing-10);
 }
 
 .global-header {
-  margin-bottom: var(--spacing-12);
+  margin-bottom: var(--spacing-4);
 }
 
 .main-heading {
@@ -286,7 +286,7 @@ a:focus {
 
 .bio {
   display: flex;
-  margin-bottom: var(--spacing-16);
+  margin-bottom: var(--spacing-24);
 }
 
 .bio p {
