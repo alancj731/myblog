@@ -1,12 +1,71 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 10 May 2025 01:28:46 GMT</lastBuildDate><item><title><![CDATA[Rate Limiting in Express]]></title><description><![CDATA[🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​ Ever had your server crash because of too many requests? ​​Rate limiting​​ is a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</guid><pubDate>Sat, 10 May 2025 01:25:31 GMT</pubDate><content:encoded>&lt;h2&gt;🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​&lt;/h2&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 10 May 2025 01:31:39 GMT</lastBuildDate><item><title><![CDATA[Rate Limiting in Express]]></title><description><![CDATA[🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​ Ever had your server crash because of too many requests? ​​Rate limiting​​ is a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</guid><pubDate>Sat, 10 May 2025 01:25:31 GMT</pubDate><content:encoded>&lt;h3&gt;🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​&lt;/h3&gt;
 &lt;p&gt;Ever had your server crash because of too many requests? ​​Rate limiting​​ is a simple but powerful way to protect your backend from abuse, DDoS attacks, or accidental traffic spikes.&lt;/p&gt;
 &lt;h3&gt;💡 Why Use Rate Limiting?​​&lt;/h3&gt;
 &lt;p&gt;✅ ​​Prevents server overload​​ – Stops one user from spamming your API.
 ✅ ​​Protects against brute-force attacks​​ – Limits login attempts.
 ✅ ​​Fair usage​​ – Ensures all users get equal access.&lt;/p&gt;
 &lt;p&gt;🔒 With ​​Express​​, enabling rate limiting is super easy! Here’s how:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;./one.jpeg&quot; alt=&quot;code snippet&quot;&gt;
-&lt;img src=&quot;./two.jpeg&quot; alt=&quot;code snippet&quot;&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Concurrent tasks]]></title><description><![CDATA[💡 Tip for Working with Concurrent Tasks When managing concurrent tasks—especially when grouping data by a key —be careful to use Array or…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/concurrent/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/concurrent/</guid><pubDate>Fri, 09 May 2025 15:45:12 GMT</pubDate><content:encoded>&lt;h3&gt;💡 Tip for Working with Concurrent Tasks&lt;/h3&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 609px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/myblog/static/a0c67e75eed1928a4b18f7f96002feec/d0d8c/one.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 77.21518987341771%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAPCAYAAADkmO9VAAAACXBIWXMAAA7EAAAOxAGVKw4bAAACHUlEQVR42oVUy27bMBD0h9gU36RISZRj2U6UwD0YPfRSoP//MdOhZB+CpOphsCRBzXJndrWLNuK1m5BywTj/QFsmlFjQx4TrkFBSRLAGydsFSkk0TfNP7LRxiG2BiR1C7tENA/pMEmfgjF5g9RqdVpCy2SZslIZyHiq00EYhtZ4JLIwR2IsGQohP2CJbCCUJfU4IQ4YfRzgS5j5inDoMJUI3a4ny+ZH4HOV3JfeXG8b3O9J5RuwSTpcRL+cR1/kIw9JN1Ai9Y2ILqZmAOipW06gGB776iZWQ+uSXM9IwwvByigaZJdfYJY9E5OyX19aYk0MZIvoSuPaLUdERNE5JiZ1SCsePO+Zff/D68zeutzuG44R+mpGDpyEKnoZUGK4N79eP13OzkFXDPM9kJbTaoM0dbEjwqYd2AY12kCbgcHia0TzWVScJwdIE3V6ieMSq5/OFNjC7U9BWklAt6/VshbaKZlFLr78Y8cUUaQNCGahRgDme4UuBdbyoCSUovlyMqGSLEf9rm8ZFxJGapWqEpxYW3kc49qWnDEZbaKmWNqmvqcLL7UnxNOCK06nHWDgpNKKwdUqXMaREtGgdW4vJKo65XUZRMtG3hIZto1nafr+nsOwluRpQsT8cHhAPrHuxOSm+Rf92w2V+w8ftjOvbhBNnuk+clMjee/wUKkpLvb3b1tDS5RAcBXcwts5w7TGJev7sNaf1urashvstwr/5ZaqZKCDlegAAAABJRU5ErkJggg==&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;code snippet&quot;
+        title=&quot;&quot;
+        src=&quot;/myblog/static/a0c67e75eed1928a4b18f7f96002feec/d0d8c/one.png&quot;
+        srcset=&quot;/myblog/static/a0c67e75eed1928a4b18f7f96002feec/c26ae/one.png 158w,
+/myblog/static/a0c67e75eed1928a4b18f7f96002feec/6bdcf/one.png 315w,
+/myblog/static/a0c67e75eed1928a4b18f7f96002feec/d0d8c/one.png 609w&quot;
+        sizes=&quot;(max-width: 609px) 100vw, 609px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;
+&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/myblog/static/238f27e4a08fa93fe7cb8ec76b980c7d/4971b/two.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 94.9367088607595%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAATCAYAAACQjC21AAAACXBIWXMAAA7EAAAOxAGVKw4bAAACCUlEQVR42p2U7VbaQBCGuRQFAvkgBBJFIMQgIQEUKJ8BbXu8sCqIHESwx1t8nZ0Wemx/lPBjzm4mOU9m95nd2Gq1wvPTnGMxe8Ts4QeWiyfMHx84FvMZx3q1xM/tBm+bV2xfX2hc8/z9bcv5zfoFq+UzYq4XoFAq4fyiCFnLIKWo+zEpK1AyOs85T/O0piElq0irGcgU4r2i65Aop2YNxMLbO4wmt+gNBihXHGQoeZJI4jQpIS6l9uNufir9yf8dei6PGMOGIwbaziX9VeNqJKoukUofHOInDByMQ9x0urhud1D16igTtFb3GS6gcSkisD8cw280CRLgyvOQzZswTBOqnj2uQlGRVSjAyFsMUjQdGu1jxjB46eLDSMB60IRTrdISHQax4d/7eFSFd9/vMRGmwxAV12XoSTzB1o6W0ifL3V6fgFXaO52XK8DJtBwdOAonaF7fsOWaH8Bxr+AFDdiXbqTW2QNbHQHyGSCWrNAe7k7KUUsu0ekQdg3T4hDJnGUhS7mUokW33O0P0Gq3UW80UCHbRdvmCg8F/QMUZ1mIGY5HENWmqWWiGv4EnH79hnA6Jcs9XJRtBmq6wXt5FPBLf4gGWfabLbg1j+U4JKdoVyKJ+dSHPrWJW6tTuwS/BNF5Fvfc7traxUHAnHUG8+wcYhQJjZpaJVg2n+dnYV5cGApdFv+DCpkfG8RiHfoLJDUAAAAASUVORK5CYII=&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;code snippet&quot;
+        title=&quot;&quot;
+        src=&quot;/myblog/static/238f27e4a08fa93fe7cb8ec76b980c7d/f058b/two.png&quot;
+        srcset=&quot;/myblog/static/238f27e4a08fa93fe7cb8ec76b980c7d/c26ae/two.png 158w,
+/myblog/static/238f27e4a08fa93fe7cb8ec76b980c7d/6bdcf/two.png 315w,
+/myblog/static/238f27e4a08fa93fe7cb8ec76b980c7d/f058b/two.png 630w,
+/myblog/static/238f27e4a08fa93fe7cb8ec76b980c7d/4971b/two.png 784w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Concurrent tasks]]></title><description><![CDATA[💡 Tip for Working with Concurrent Tasks When managing concurrent tasks—especially when grouping data by a key —be careful to use Array or…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/concurrent/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/concurrent/</guid><pubDate>Fri, 09 May 2025 15:45:12 GMT</pubDate><content:encoded>&lt;h3&gt;💡 Tip for Working with Concurrent Tasks&lt;/h3&gt;
 &lt;p&gt;When managing concurrent tasks—especially when grouping data by a key —be careful to use Array or Map to store the intermediate or final results.&lt;/p&gt;
 &lt;h3&gt;🔍 Why?&lt;/h3&gt;
 &lt;p&gt;Check the first code snippet, where multiple tasks fetch project data and try to group projects by userId. When using an array to check for existing user records—as shown in the first code snippet—this approach can fail in a concurrent environment. Since each task may not be aware of changes made by others, it can result in duplicate entries for the same userId. Replacing the array with a Map doesn&apos;t fix the problem either.&lt;/p&gt;
