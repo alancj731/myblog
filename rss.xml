@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 10 May 2025 01:31:39 GMT</lastBuildDate><item><title><![CDATA[Rate Limiting in Express]]></title><description><![CDATA[🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​ Ever had your server crash because of too many requests? ​​Rate limiting​​ is a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</guid><pubDate>Sat, 10 May 2025 01:25:31 GMT</pubDate><content:encoded>&lt;h3&gt;🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 10 May 2025 01:39:59 GMT</lastBuildDate><item><title><![CDATA[Rate Limiting in Express]]></title><description><![CDATA[🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​ Ever had your server crash because of too many requests? ​​Rate limiting​​ is a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</guid><pubDate>Sat, 10 May 2025 01:25:31 GMT</pubDate><content:encoded>&lt;h3&gt;🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​&lt;/h3&gt;
 &lt;p&gt;Ever had your server crash because of too many requests? ​​Rate limiting​​ is a simple but powerful way to protect your backend from abuse, DDoS attacks, or accidental traffic spikes.&lt;/p&gt;
 &lt;h3&gt;💡 Why Use Rate Limiting?​​&lt;/h3&gt;
 &lt;p&gt;✅ ​​Prevents server overload​​ – Stops one user from spamming your API.
@@ -34,8 +34,9 @@
         decoding=&quot;async&quot;
       /&gt;
   &lt;/a&gt;
-    &lt;/span&gt;
-&lt;span
+    &lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;Testing with curl:&lt;/p&gt;
+&lt;p&gt;&lt;span
       class=&quot;gatsby-resp-image-wrapper&quot;
       style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
     &gt;
