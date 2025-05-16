@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sat, 10 May 2025 01:39:59 GMT</lastBuildDate><item><title><![CDATA[Rate Limiting in Express]]></title><description><![CDATA[🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​ Ever had your server crash because of too many requests? ​​Rate limiting​​ is a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</guid><pubDate>Sat, 10 May 2025 01:25:31 GMT</pubDate><content:encoded>&lt;h3&gt;🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​&lt;/h3&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Fri, 16 May 2025 15:37:18 GMT</lastBuildDate><item><title><![CDATA[Rate Limiting in Express]]></title><description><![CDATA[💡 How to reduced backend costs by 98% using Express and Google Cloud Functions Recently, I set out to reduce the cost of running a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/gcloudfunction/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/gcloudfunction/</guid><pubDate>Fri, 16 May 2025 15:19:37 GMT</pubDate><content:encoded>&lt;h3&gt;💡 How to reduced backend costs by 98% using Express and Google Cloud Functions&lt;/h3&gt;
+&lt;p&gt;Recently, I set out to reduce the cost of running a lightweight backend app originally deployed on a Google Compute Engine (E2.small), which was costing around $13/month.&lt;/p&gt;
+&lt;p&gt;The backend was built with Nest.js, but since the workload was minimal, I explored migrating it to Express.js on Google Cloud Functions.&lt;/p&gt;
+&lt;p&gt;After switching, the estimated cost—according to the [Google Cloud Pricing Calculator]—dropped by *** 98% ***(we hit the endpoint once per minute and each request takes less than 1 second).&lt;/p&gt;
+&lt;p&gt;I couldn’t find useful resources or sample code showing how to integrate Express with Cloud Functions.
+So, I’ve decided to share the architecture and setup I used to help others looking to do the same.&lt;/p&gt;
+&lt;p&gt;If you’re running a simple backend and want to optimize costs, this approach might be worth considering--plus, a major bonus is you no longer have to worry about backend crashes.. 💪&lt;/p&gt;
+&lt;p&gt;&lt;span
+      class=&quot;gatsby-resp-image-wrapper&quot;
+      style=&quot;position: relative; display: block; margin-left: auto; margin-right: auto; max-width: 630px; &quot;
+    &gt;
+      &lt;a
+    class=&quot;gatsby-resp-image-link&quot;
+    href=&quot;/myblog/static/5fcc4795cbb21b192e2e8c6b5dec7cd3/6569d/code.png&quot;
+    style=&quot;display: block&quot;
+    target=&quot;_blank&quot;
+    rel=&quot;noopener&quot;
+  &gt;
+    &lt;span
+    class=&quot;gatsby-resp-image-background-image&quot;
+    style=&quot;padding-bottom: 232.91139240506328%; position: relative; bottom: 0; left: 0; background-image: url(&apos;data:image/png;base64,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&apos;); background-size: cover; display: block;&quot;
+  &gt;&lt;/span&gt;
+  &lt;img
+        class=&quot;gatsby-resp-image-image&quot;
+        alt=&quot;code snippet&quot;
+        title=&quot;&quot;
+        src=&quot;/myblog/static/5fcc4795cbb21b192e2e8c6b5dec7cd3/f058b/code.png&quot;
+        srcset=&quot;/myblog/static/5fcc4795cbb21b192e2e8c6b5dec7cd3/c26ae/code.png 158w,
+/myblog/static/5fcc4795cbb21b192e2e8c6b5dec7cd3/6bdcf/code.png 315w,
+/myblog/static/5fcc4795cbb21b192e2e8c6b5dec7cd3/f058b/code.png 630w,
+/myblog/static/5fcc4795cbb21b192e2e8c6b5dec7cd3/40601/code.png 945w,
+/myblog/static/5fcc4795cbb21b192e2e8c6b5dec7cd3/78612/code.png 1260w,
+/myblog/static/5fcc4795cbb21b192e2e8c6b5dec7cd3/6569d/code.png 1328w&quot;
+        sizes=&quot;(max-width: 630px) 100vw, 630px&quot;
+        style=&quot;width:100%;height:100%;margin:0;vertical-align:middle;position:absolute;top:0;left:0;&quot;
+        loading=&quot;lazy&quot;
+        decoding=&quot;async&quot;
+      /&gt;
+  &lt;/a&gt;
+    &lt;/span&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Rate Limiting in Express]]></title><description><![CDATA[🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​ Ever had your server crash because of too many requests? ​​Rate limiting​​ is a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/ratelimiting/</guid><pubDate>Sat, 10 May 2025 01:25:31 GMT</pubDate><content:encoded>&lt;h3&gt;🚀 Protect Your Backend with Rate Limiting in Express! 🚀​​&lt;/h3&gt;
 &lt;p&gt;Ever had your server crash because of too many requests? ​​Rate limiting​​ is a simple but powerful way to protect your backend from abuse, DDoS attacks, or accidental traffic spikes.&lt;/p&gt;
 &lt;h3&gt;💡 Why Use Rate Limiting?​​&lt;/h3&gt;
 &lt;p&gt;✅ ​​Prevents server overload​​ – Stops one user from spamming your API.
