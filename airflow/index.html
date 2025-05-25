@@ -19,7 +19,41 @@ docker installation: <em><strong>no</strong></em></p>
 <div class="gatsby-highlight" data-language="json"><pre class="language-json"><code class="language-json"><span class="token punctuation">{</span><span class="token property">"admin"</span><span class="token operator">:</span> <span class="token string">"Tqp8vGzhx434pnPV"</span><span class="token punctuation">}</span></code></pre></div>
 <h2>Run airflow</h2>
 <div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash">airflow standalone</code></pre></div>
-<p>login at: <a href="https://localhost:8080/">https://localhost:8080/</a></p></section><hr/><footer><div class="bio"><p><strong>Jian Chen</strong>  <a href="https://www.linkedin.com/in/winnipegdatafan/">LinkedIn</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/myblog/gcloudfunction/">← <!-- -->Reduce cost using Google Cloud Function</a></li><li></li></ul></nav></main><footer>© <!-- -->2025<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/airflow/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
+<p>login at: <a href="https://localhost:8080/">https://localhost:8080/</a></p>
+<h2>Create a simple dag file</h2>
+<div class="gatsby-highlight" data-language="bash"><pre class="language-bash"><code class="language-bash"><span class="token comment"># ~/airflow/dags/simple_dag.py</span>
+from airflow <span class="token function">import</span> DAG
+from airflow.operators.python <span class="token function">import</span> PythonOperator
+from datetime <span class="token function">import</span> datetime, timedelta
+
+<span class="token comment"># Define a simple Python function</span>
+def greet<span class="token punctuation">(</span><span class="token punctuation">)</span>:
+    print<span class="token punctuation">(</span><span class="token string">"Hello from Airflow!"</span><span class="token punctuation">)</span>
+
+<span class="token comment"># Default arguments for the DAG</span>
+default_args <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token string">'owner'</span><span class="token builtin class-name">:</span> <span class="token string">'airflow'</span>,
+    <span class="token string">'retries'</span><span class="token builtin class-name">:</span> <span class="token number">1</span>,
+    <span class="token string">'retry_delay'</span><span class="token builtin class-name">:</span> timedelta<span class="token punctuation">(</span>minutes<span class="token operator">=</span><span class="token number">5</span><span class="token punctuation">)</span>,
+<span class="token punctuation">}</span>
+
+<span class="token comment"># Define the DAG</span>
+with DAG<span class="token punctuation">(</span>
+    <span class="token assign-left variable">dag_id</span><span class="token operator">=</span><span class="token string">'simple_greet_dag'</span>,
+    <span class="token assign-left variable">default_args</span><span class="token operator">=</span>default_args,
+    <span class="token assign-left variable">description</span><span class="token operator">=</span><span class="token string">'A simple DAG that greets'</span>,
+    <span class="token assign-left variable">schedule</span><span class="token operator">=</span><span class="token string">'@daily'</span>,
+    <span class="token assign-left variable">start_date</span><span class="token operator">=</span>datetime<span class="token punctuation">(</span><span class="token number">2024</span>, <span class="token number">1</span>, <span class="token number">1</span><span class="token punctuation">)</span>,
+    <span class="token assign-left variable">catchup</span><span class="token operator">=</span>False,
+<span class="token punctuation">)</span> as dag:
+
+    <span class="token comment"># Define the task</span>
+    greet_task <span class="token operator">=</span> PythonOperator<span class="token punctuation">(</span>
+        <span class="token assign-left variable">task_id</span><span class="token operator">=</span><span class="token string">'greet_task'</span>,
+        <span class="token assign-left variable">python_callable</span><span class="token operator">=</span>greet
+    <span class="token punctuation">)</span>
+
+    greet_task</code></pre></div></section><hr/><footer><div class="bio"><p><strong>Jian Chen</strong>  <a href="https://www.linkedin.com/in/winnipegdatafan/">LinkedIn</a></p></div></footer></article><nav class="blog-post-nav"><ul style="display:flex;flex-wrap:wrap;justify-content:space-between;list-style:none;padding:0"><li><a rel="prev" href="/myblog/gcloudfunction/">← <!-- -->Reduce cost using Google Cloud Function</a></li><li></li></ul></nav></main><footer>© <!-- -->2025<!-- -->, Built with<!-- --> <a href="https://www.gatsbyjs.com">Gatsby</a></footer></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/airflow/";/*]]>*/</script><!-- slice-start id="_gatsby-scripts-1" -->
           <script
             id="gatsby-chunk-mapping"
           >

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 25 May 2025 14:03:50 GMT</lastBuildDate><item><title><![CDATA[How to install airflow]]></title><description><![CDATA[Install airflow Chosen version airflow version: 3.0.1
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Gatsby Starter Blog RSS Feed]]></title><description><![CDATA[A starter blog demonstrating what Gatsby can do.]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io</link><generator>GatsbyJS</generator><lastBuildDate>Sun, 25 May 2025 14:12:49 GMT</lastBuildDate><item><title><![CDATA[How to install airflow]]></title><description><![CDATA[Install airflow Chosen version airflow version: 3.0.1
 python version: 3.11.12
 docker installation: no Installation setup airflow home…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/airflow/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/airflow/</guid><pubDate>Sun, 25 May 2025 13:51:54 GMT</pubDate><content:encoded>&lt;h1&gt;Install airflow&lt;/h1&gt;
 &lt;h2&gt;Chosen version&lt;/h2&gt;
@@ -20,7 +20,41 @@ docker installation: &lt;em&gt;&lt;strong&gt;no&lt;/strong&gt;&lt;/em&gt;&lt;/p&
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;json&quot;&gt;&lt;pre class=&quot;language-json&quot;&gt;&lt;code class=&quot;language-json&quot;&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token property&quot;&gt;&quot;admin&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Tqp8vGzhx434pnPV&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;h2&gt;Run airflow&lt;/h2&gt;
 &lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;airflow standalone&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;login at: &lt;a href=&quot;https://localhost:8080/&quot;&gt;https://localhost:8080/&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Reduce cost using Google Cloud Function]]></title><description><![CDATA[💡 How to reduced backend costs by 98% using Express and Google Cloud Functions Recently, I set out to reduce the cost of running a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/gcloudfunction/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/gcloudfunction/</guid><pubDate>Fri, 16 May 2025 15:19:37 GMT</pubDate><content:encoded>&lt;h3&gt;💡 How to reduced backend costs by 98% using Express and Google Cloud Functions&lt;/h3&gt;
+&lt;p&gt;login at: &lt;a href=&quot;https://localhost:8080/&quot;&gt;https://localhost:8080/&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Create a simple dag file&lt;/h2&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;bash&quot;&gt;&lt;pre class=&quot;language-bash&quot;&gt;&lt;code class=&quot;language-bash&quot;&gt;&lt;span class=&quot;token comment&quot;&gt;# ~/airflow/dags/simple_dag.py&lt;/span&gt;
+from airflow &lt;span class=&quot;token function&quot;&gt;import&lt;/span&gt; DAG
+from airflow.operators.python &lt;span class=&quot;token function&quot;&gt;import&lt;/span&gt; PythonOperator
+from datetime &lt;span class=&quot;token function&quot;&gt;import&lt;/span&gt; datetime, timedelta
+
+&lt;span class=&quot;token comment&quot;&gt;# Define a simple Python function&lt;/span&gt;
+def greet&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;:
+    print&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Hello from Airflow!&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Default arguments for the DAG&lt;/span&gt;
+default_args &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;token string&quot;&gt;&apos;owner&apos;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&apos;airflow&apos;&lt;/span&gt;,
+    &lt;span class=&quot;token string&quot;&gt;&apos;retries&apos;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;,
+    &lt;span class=&quot;token string&quot;&gt;&apos;retry_delay&apos;&lt;/span&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;:&lt;/span&gt; timedelta&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;minutes&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;,
+&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;token comment&quot;&gt;# Define the DAG&lt;/span&gt;
+with DAG&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;token assign-left variable&quot;&gt;dag_id&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;simple_greet_dag&apos;&lt;/span&gt;,
+    &lt;span class=&quot;token assign-left variable&quot;&gt;default_args&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;default_args,
+    &lt;span class=&quot;token assign-left variable&quot;&gt;description&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;A simple DAG that greets&apos;&lt;/span&gt;,
+    &lt;span class=&quot;token assign-left variable&quot;&gt;schedule&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;@daily&apos;&lt;/span&gt;,
+    &lt;span class=&quot;token assign-left variable&quot;&gt;start_date&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;datetime&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2024&lt;/span&gt;, &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;, &lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;,
+    &lt;span class=&quot;token assign-left variable&quot;&gt;catchup&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;False,
+&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; as dag:
+
+    &lt;span class=&quot;token comment&quot;&gt;# Define the task&lt;/span&gt;
+    greet_task &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; PythonOperator&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;
+        &lt;span class=&quot;token assign-left variable&quot;&gt;task_id&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&apos;greet_task&apos;&lt;/span&gt;,
+        &lt;span class=&quot;token assign-left variable&quot;&gt;python_callable&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;greet
+    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;
+
+    greet_task&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Reduce cost using Google Cloud Function]]></title><description><![CDATA[💡 How to reduced backend costs by 98% using Express and Google Cloud Functions Recently, I set out to reduce the cost of running a…]]></description><link>https://gatsbystarterblogsource.gatsbyjs.io/gcloudfunction/</link><guid isPermaLink="false">https://gatsbystarterblogsource.gatsbyjs.io/gcloudfunction/</guid><pubDate>Fri, 16 May 2025 15:19:37 GMT</pubDate><content:encoded>&lt;h3&gt;💡 How to reduced backend costs by 98% using Express and Google Cloud Functions&lt;/h3&gt;
 &lt;p&gt;Recently, I set out to reduce the cost of running a lightweight backend app originally deployed on a Google Compute Engine (E2.small), which was costing around $13/month.&lt;/p&gt;
 &lt;p&gt;The backend was built with Nest.js, but since the workload was minimal, I explored migrating it to Express.js on Google Cloud Functions.&lt;/p&gt;
 &lt;p&gt;After switching, the estimated cost—according to the [Google Cloud Pricing Calculator]—dropped by *** 98% ***(we hit the endpoint once per minute and each request takes less than 1 second).&lt;/p&gt;
