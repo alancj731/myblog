@@ -15,7 +15,9 @@ dlt init sql_database postgres <span class="token parameter variable">--eject</s
 <span class="token comment"># install required packages for the template</span>
 uv pip <span class="token function">install</span> <span class="token parameter variable">-r</span> requirements.txt
 <span class="token comment"># install psycopg2</span>
-uv pip <span class="token function">install</span> psycopg2</code></pre></div>
+uv pip <span class="token function">install</span> psycopg2
+<span class="token comment"># to make sure pyscopg2 work, you may need libpq-dev, install it with</span>
+<span class="token function">apt-get</span> <span class="token function">install</span> libpq-dev</code></pre></div>
 <h1>Setup the secrets.toml file:</h1>
 <p>edit and set the required value in .dlt/secrets.toml file, below shows an example</p>
 <div class="gatsby-highlight" data-language="toml"><pre class="language-toml"><code class="language-toml"><span class="token punctuation">[</span><span class="token table class-name">sources.sql_database.credentials</span><span class="token punctuation">]</span>
