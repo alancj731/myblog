@@ -33,7 +33,7 @@ uv pip <span class="token function">install</span> psycopg2</code></pre></div>
 <span class="token key property">host</span> <span class="token punctuation">=</span> <span class="token string">"127.0.0.1"</span> <span class="token comment"># fill this in!</span>
 <span class="token key property">port</span> <span class="token punctuation">=</span> <span class="token number">5432</span> <span class="token comment"># fill this in!</span>
 <span class="token key property">connect_timeout</span> <span class="token punctuation">=</span> <span class="token number">15</span></code></pre></div>
-<h2>change the sql_database_pipeline.py to customize the pipeline</h2>
+<h2>customize sql_database_pipeline.py</h2>
 <p>The example pipeline copy a "tags" table from source db to destination db</p>
 <div class="gatsby-highlight" data-language="py"><pre class="language-py"><code class="language-py"><span class="token comment">#...</span>
 <span class="token keyword">def</span> <span class="token function">load_select_tables_from_database</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
