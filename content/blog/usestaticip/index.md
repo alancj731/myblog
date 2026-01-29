@@ -4,7 +4,7 @@ date: "2026-01-28T23:24:12-05:00"
 description: Is it possible to maitian a consistent ip address when using AWS Spot Instances
 ---
 
-### 💡 Create a static ip address
+### 💡 Create a Static IP Address
 ```
 gcloud compute addresses create my-cheap-ip \
     --region=us-central1 \
