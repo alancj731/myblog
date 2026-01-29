@@ -1,7 +1,7 @@
 ---
-title: Get a Persistent IP for GCP Spot Instances
+title: Get a Persistent IP for GCP Spot instances
 date: "2026-01-28T23:24:12-05:00"
-description: Is it possible to maitian a consistent ip address when using Spot Instances
+description: Is it possible to maintain a consistent ip address when using Spot instances
 ---
 
 ### 💡 Create a Static IP Address
