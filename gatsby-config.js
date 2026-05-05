@@ -10,7 +10,7 @@
 module.exports = {
   pathPrefix: "/myblog",
   siteMetadata: {
-    title: `The Matrix`,
+    title: `The Investment Matrix`,
     author: {
       name: `Jian Chen`,
       summary: `who lives and works in Winnipeg building useful things.`,
